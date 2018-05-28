@@ -1,9 +1,8 @@
 package pl.brute_force.jluhn.validator;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
+import java.util.List;
 
 @Data
 @Builder
@@ -11,4 +10,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ValidationResult {
     private boolean valid;
+    @Singular
+    private List<ValidationError> errors;
 }
